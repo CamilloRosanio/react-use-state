@@ -16,3 +16,29 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
+
+
+/* GENERAL */
+
+.tagsContainer {
+    margin-bottom: 1rem;
+}
+
+.tagLabel.showDetail {
+    background-color: goldenrod;
+    color: black;
+}
+
+.tagDetail {
+    padding: 1rem;
+    border-radius: 15px;
+    border: 1px solid gray;
+}
+
+.tagDetail h3 {
+    margin-bottom: .5rem;
+}
+
+.tagDetail p {
+    font-size: 0.8rem;
+}
