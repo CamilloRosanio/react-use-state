@@ -1,21 +1,31 @@
 import styles from './Tags.module.css';
 import Languages from '../../data/languages';
 
+import { useState } from 'react';
+
 
 function Tags() {
+
+    const [showIndex, setIndex] = useState(0);
+    console.log(showIndex);
 
     return (
         <>
             <section className='tagsContainer'>
                 <ul className={styles.tagList}>
                     {Languages.map((item, index) => (
-                        <li className={styles.tagLabel + ' ' + item.title} key={index}>{item.title}</li>
+                        <li
+                            onClick={() => setIndex((showIndex) => index)}
+                            className={styles.tagLabel + ' ' + item.title}
+                            key={index}>
+                            {item.title}
+                        </li>
                     ))}
                 </ul>
 
                 <div className="tagDetail">
-                    <h3>{Languages[0].title}</h3>
-                    <p>{Languages[0].description}</p>
+                    <h3>{Languages[showIndex].title}</h3>
+                    <p>{Languages[showIndex].description}</p>
                 </div>
 
             </section>
