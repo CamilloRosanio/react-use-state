@@ -3,6 +3,8 @@ import Languages from '../../data/languages';
 
 import { useState } from 'react';
 
+import tagDetail from './tagDetail';
+
 
 function Tags() {
 
