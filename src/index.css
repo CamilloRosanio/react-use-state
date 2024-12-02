@@ -24,11 +24,6 @@
     margin-bottom: 1rem;
 }
 
-.tagLabel.showDetail {
-    background-color: goldenrod;
-    color: black;
-}
-
 .tagDetail {
     padding: 1rem;
     border-radius: 15px;

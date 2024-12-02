@@ -4,6 +4,7 @@ import Languages from '../../data/languages';
 import TagDetail from './TagDetail';
 
 
+
 function Tags() {
 
     const [showIndex, setIndex] = useState(0);
@@ -15,7 +16,9 @@ function Tags() {
                 <ul className={styles.tagList}>
                     {Languages.map((item, index) => (
                         <li
-                            onClick={() => setIndex((showIndex) => index)}
+                            onClick={() => {
+                                setIndex((showIndex) => index);
+                            }}
                             className={styles.tagLabel + ' ' + item.title}
                             key={index}>
                             {item.title}
@@ -23,17 +26,12 @@ function Tags() {
                     ))}
                 </ul>
 
-                {/* SOLUZIONE SENZA COMPONENT */}
-                {/* <div className="tagDetail">
-                    <h3>{Languages[showIndex].title}</h3>
-                    <p>{Languages[showIndex].description}</p>
-                </div> */}
-
                 <TagDetail
                     index={showIndex}
+                    data={Languages}
                 />
 
-            </section>
+            </section >
         </>
     )
 }

@@ -13,3 +13,9 @@
     color: white;
     cursor: pointer;
 }
+
+.tagLabel.highlight {
+    background-color: goldenrod;
+    color: black;
+    font-weight: bold;
+}

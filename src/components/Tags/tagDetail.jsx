@@ -1,12 +1,10 @@
-import Languages from '../../data/languages';
-
-function TagDetail({ index, title, description }) {
+function TagDetail({ index, data }) {
 
     return (
         <>
             <div className="tagDetail">
-                <h3>{Languages[index].title}</h3>
-                <p>{Languages[index].description}</p>
+                <h3>{data[index].title}</h3>
+                <p>{data[index].description}</p>
             </div>
         </>
     )
