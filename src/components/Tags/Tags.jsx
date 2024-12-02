@@ -1,9 +1,7 @@
+import { useState } from 'react';
 import styles from './Tags.module.css';
 import Languages from '../../data/languages';
-
-import { useState } from 'react';
-
-import tagDetail from './tagDetail';
+import TagDetail from './TagDetail';
 
 
 function Tags() {
@@ -25,10 +23,15 @@ function Tags() {
                     ))}
                 </ul>
 
-                <div className="tagDetail">
+                {/* SOLUZIONE SENZA COMPONENT */}
+                {/* <div className="tagDetail">
                     <h3>{Languages[showIndex].title}</h3>
                     <p>{Languages[showIndex].description}</p>
-                </div>
+                </div> */}
+
+                <TagDetail
+                    index={showIndex}
+                />
 
             </section>
         </>
